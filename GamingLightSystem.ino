@@ -21,9 +21,9 @@
 */
 #define PIN 6 // Data Pin Being Used
 #define NUMPIXELS 16 // Number of LEDs Connected
-int delayval = 300; // Delay Between Lighting Updates
-int originalColor[3] = {220, 80, 80}; // Default Display Color, Inputted In The Form {R, G, B} With Values From 0-255.
-int delta[3] = {30, 30, 30}; // Maximum Variation From Original Color (Out of 255)
+const int delayval = 300; // Delay Between Lighting Updates
+const int originalColor[3] = {220, 80, 80}; // Default Display Color, Inputted In The Form {R, G, B} With Values From 0-255.
+const int delta[3] = {30, 30, 30}; // Maximum Variation From Original Color (Out of 255)
 
 
 
@@ -42,7 +42,7 @@ void setup() {
 
 void loop() {
 
-  bool colorBeingChanged[3] = {true, false, false}; //Which Color Is Being Changes (Red, Green, Blue)
+  bool colorBeingChanged[3] = {true, false, false}; //Which Color Is Being Changed (Red, Green, Blue)
 
   for (int i = 0; i < 3; i++)
   {
